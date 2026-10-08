@@ -510,3 +510,33 @@ body {
   line-height: .88 !important;
   letter-spacing: -.06em !important;
 }
+/* CINEMATIC HERO QUOTE */
+
+.intro .title-wrap h1.hero-quote {
+  font-family: Georgia, "Times New Roman", serif !important;
+
+  font-weight: 700 !important;
+
+  font-size: clamp(3rem, 4.8vw, 5.8rem) !important;
+
+  line-height: 1.05 !important;
+
+  letter-spacing: -0.035em !important;
+
+  color: #e5dccb !important;
+
+  text-shadow: none !important;
+
+  max-width: 850px;
+
+  text-transform: uppercase;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .intro .title-wrap h1.hero-quote {
+    font-size: clamp(2.5rem, 8vw, 4.5rem) !important;
+    line-height: 1.1 !important;
+  }
+}
