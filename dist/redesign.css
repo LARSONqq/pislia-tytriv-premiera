@@ -295,6 +295,9 @@ body {
 /* =========================
    HERO POSTER
    ========================= */
+/* =========================
+   HERO POSTER
+   ========================= */
 
 .intro {
   position: relative;
@@ -304,7 +307,7 @@ body {
 .intro .title-wrap {
   position: relative;
   z-index: 5;
-  max-width: 68%;
+  max-width: 64%;
 }
 
 .intro .intro-kicker,
@@ -318,89 +321,104 @@ body {
 
 .intro-poster {
   position: absolute;
-
-  top: 16%;
-  right: 5%;
-
-  width: clamp(220px, 21vw, 360px);
-
+  top: 12%;
+  right: 3%;
+  width: clamp(300px, 25vw, 440px);
   z-index: 3;
 }
 
 .intro-poster img {
   display: block;
-
   width: 100%;
   height: auto;
 
-  border-radius: 3px;
-
-  opacity: 0.92;
+  border-radius: 2px;
+  opacity: .96;
 
   filter:
-    brightness(.82)
-    contrast(1.06)
-    saturate(.85);
+    brightness(.78)
+    contrast(1.08)
+    saturate(.82);
+
+  -webkit-mask-image: linear-gradient(
+    to left,
+    #000 70%,
+    rgba(0,0,0,.92) 82%,
+    rgba(0,0,0,.25) 96%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to left,
+    #000 70%,
+    rgba(0,0,0,.92) 82%,
+    rgba(0,0,0,.25) 96%,
+    transparent 100%
+  );
 }
 
 .intro-poster-label {
   margin: 0 0 10px;
-
-  color: rgba(255,255,255,.45);
-
+  color: rgba(255,255,255,.38);
   font-size: 9px;
   font-weight: 700;
-
-  letter-spacing: .24em;
-
-  text-transform: uppercase;
+  letter-spacing: .22em;
 }
 
 
-/* темне змішування постера з фоном */
+/* затемнення зліва */
+
+.intro-poster::before {
+  content: "";
+  position: absolute;
+  inset: 24px 0 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background: linear-gradient(
+    90deg,
+    rgba(5,5,7,.75) 0%,
+    rgba(5,5,7,.25) 22%,
+    transparent 48%
+  );
+}
+
+
+/* дим унизу самого постера */
 
 .intro-poster::after {
   content: "";
-
   position: absolute;
 
-  inset: 25px 0 0;
+  left: -80px;
+  right: -30px;
+  bottom: -45px;
+
+  height: 180px;
 
   pointer-events: none;
 
   background:
-    linear-gradient(
-      90deg,
-      rgba(5,5,7,.55) 0%,
-      transparent 28%,
-      transparent 75%,
-      rgba(5,5,7,.28) 100%
+    radial-gradient(
+      ellipse at 55% 60%,
+      rgba(210,210,210,.18),
+      rgba(150,150,150,.08) 35%,
+      transparent 70%
     );
 
-  border-radius: 3px;
+  filter: blur(26px);
 }
 
 
-/* =========================
-   SMOKE
-   ========================= */
+/* додатковий атмосферний дим */
 
 .intro-smoke {
   position: absolute;
-
   pointer-events: none;
-
   z-index: 4;
-
   border-radius: 50%;
-
   filter: blur(45px);
-
-  opacity: .7;
 }
-
-
-/* дим біля постера */
 
 .intro-smoke-one {
   width: 650px;
@@ -408,6 +426,8 @@ body {
 
   right: -100px;
   bottom: -90px;
+
+  opacity: .65;
 
   background:
     radial-gradient(
@@ -421,9 +441,6 @@ body {
   transform: rotate(-9deg);
 }
 
-
-/* трохи диму між текстом і постером */
-
 .intro-smoke-two {
   width: 480px;
   height: 180px;
@@ -431,7 +448,7 @@ body {
   right: 18%;
   bottom: 8%;
 
-  opacity: .35;
+  opacity: .3;
 
   background:
     radial-gradient(
@@ -445,9 +462,7 @@ body {
 }
 
 
-/* =========================
-   MOBILE
-   ========================= */
+/* MOBILE */
 
 @media (max-width: 850px) {
 
@@ -457,15 +472,11 @@ body {
 
   .intro-poster {
     position: relative;
-
     top: auto;
     right: auto;
 
     width: min(72vw, 320px);
-
-    margin:
-      50px auto
-      35px;
+    margin: 45px auto 30px;
   }
 
   .intro-poster-label {
@@ -475,7 +486,6 @@ body {
   .intro-smoke-one {
     width: 120%;
     height: 220px;
-
     right: -10%;
     bottom: 5%;
   }
