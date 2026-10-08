@@ -494,3 +494,19 @@ body {
     display: none;
   }
 }
+.hero-quote {
+  max-width: 760px;
+  font-size: clamp(3.5rem, 7vw, 7.5rem) !important;
+  line-height: .88 !important;
+  letter-spacing: -.06em !important;
+}
+
+.hero-quote::first-line {
+  color: #fff;
+}
+.hero-quote {
+  max-width: 760px;
+  font-size: clamp(3.5rem, 7vw, 7.5rem) !important;
+  line-height: .88 !important;
+  letter-spacing: -.06em !important;
+}
