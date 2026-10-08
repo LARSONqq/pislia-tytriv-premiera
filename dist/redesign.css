@@ -540,3 +540,25 @@ body {
     line-height: 1.1 !important;
   }
 }
+/* НАПИС ПРО БМЛ-26 */
+.intro .chapter {
+  font-size: clamp(14px, 1.3vw, 20px) !important;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+/* НИЖНІЙ ТЕКСТ */
+.intro .intro-line {
+  margin-top: 45px !important;
+}
+
+/* МОБІЛЬНА ВЕРСІЯ */
+@media (max-width: 850px) {
+  .intro .chapter {
+    font-size: 13px !important;
+  }
+
+  .intro .intro-line {
+    margin-top: 30px !important;
+  }
+}
