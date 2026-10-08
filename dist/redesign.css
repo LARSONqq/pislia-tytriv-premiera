@@ -77,7 +77,7 @@ body {
 .title-wrap h1 {
   font-family: var(--sans);
   font-weight: 900;
-  font-size: clamp(4.8rem, 13vw, 12rem);
+  font-size: clamp(4.2rem, 8.8vw, 9rem);
   line-height: .75;
   letter-spacing: -.085em;
   text-transform: uppercase;
@@ -164,7 +164,7 @@ body {
   transform: rotate(-7deg);
 }
 
-.ticket h3 { font-family: var(--sans); font-weight: 900; letter-spacing: -.065em; }
+.ticket h3 { font-family: var(--sans); font-weight: 900; font-size: clamp(1.8rem, 4vw, 4rem); letter-spacing: -.065em; overflow-wrap: anywhere; }
 .ticket-guest { font-family: var(--sans); font-weight: 800; text-transform: uppercase; }
 .qr { border: 0; background: #fff; box-shadow: 0 0 0 5px #fff, 0 0 0 6px #19191e; }
 
@@ -243,6 +243,33 @@ body {
 .scan-result.teacher { background: radial-gradient(circle at 50% 45%, #33240d, #070707 68%); }
 .display-guest.teacher h1 { color: #edc864; text-shadow: 0 0 55px rgba(235,190,79,.25); }
 
+.scanner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.file-scan-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.ops-note.is-error { color: #ff7065; }
+
 @keyframes ticket-float { 50% { transform: rotate(.4deg) translateY(-8px); } }
 @keyframes holo-sweep { 0%,25% { transform: translateX(-45%); } 68%,100% { transform: translateX(45%); } }
 
@@ -250,11 +277,16 @@ body {
   .intro { text-align: center; }
   .intro::after { display: none; }
   .title-wrap { width: 100%; }
-  .title-wrap h1 { font-size: clamp(4rem,22vw,6.2rem); }
+  .title-wrap h1 { font-size: clamp(3.2rem,14vw,5.2rem); }
   .intro-line { border: 0; padding: 0; }
   .ticket { grid-template-columns: 48px 1fr; animation: none; }
+  .ticket h3 { font-size: 1.7rem; }
   .teacher-ticket { min-height: 390px; transform: none; }
   .teacher-ticket .ticket-main::after { font-size: 4.5rem; bottom: 90px; }
+  .ticket .qr { width: 112px; height: 112px; }
+  .ticket .qr img, .ticket .qr canvas { width: 104px !important; height: 104px !important; }
+  .ticket-bottom { gap: 12px; }
+  .scanner-actions { display: grid; grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

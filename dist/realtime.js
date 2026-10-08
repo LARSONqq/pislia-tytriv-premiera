@@ -12,7 +12,7 @@
    const parsed=parse(raw),id=parsed.id;
    if(db){const{data,error}=await db.rpc("check_in_ticket",{p_ticket_id:id});if(error)throw error;return data}
    const fixed=window.PREMIERE.tickets.find(x=>x.ticketId===id);
-   const t=fixed||(id.startsWith("PT-2026-O-")&&parsed.name?{ticketId:id,name:parsed.name,number:parsed.number||id.slice(-4),type:"guest",role:"PREMIERE GUEST"}:null);
+   const t=fixed||(id.startsWith("GMH-2026-O-")&&parsed.name?{ticketId:id,name:parsed.name,number:parsed.number||id.slice(-4),type:"guest",role:"PREMIERE GUEST"}:null);
    if(!t)return{status:"invalid",ticket_id:id};
    const key=`premiere-used:${id}`,old=localStorage.getItem(key);if(old)return{status:"used",...t,checked_in_at:old};
    const now=new Date().toISOString(),result={status:"valid",...t,checked_in_at:now};localStorage.setItem(key,now);localStorage.setItem("premiere-last-checkin",JSON.stringify(result));bus?.postMessage(result);return result;
