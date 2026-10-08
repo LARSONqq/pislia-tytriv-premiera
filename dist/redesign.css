@@ -292,3 +292,195 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .ticket, .teacher-ticket .ticket-main::before { animation: none !important; }
 }
+/* =========================
+   HERO POSTER
+   ========================= */
+
+.intro {
+  position: relative;
+  overflow: hidden;
+}
+
+.intro .title-wrap {
+  position: relative;
+  z-index: 5;
+  max-width: 68%;
+}
+
+.intro .intro-kicker,
+.intro .intro-footer {
+  position: relative;
+  z-index: 6;
+}
+
+
+/* POSTER */
+
+.intro-poster {
+  position: absolute;
+
+  top: 16%;
+  right: 5%;
+
+  width: clamp(220px, 21vw, 360px);
+
+  z-index: 3;
+}
+
+.intro-poster img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 3px;
+
+  opacity: 0.92;
+
+  filter:
+    brightness(.82)
+    contrast(1.06)
+    saturate(.85);
+}
+
+.intro-poster-label {
+  margin: 0 0 10px;
+
+  color: rgba(255,255,255,.45);
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: .24em;
+
+  text-transform: uppercase;
+}
+
+
+/* темне змішування постера з фоном */
+
+.intro-poster::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 25px 0 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,5,7,.55) 0%,
+      transparent 28%,
+      transparent 75%,
+      rgba(5,5,7,.28) 100%
+    );
+
+  border-radius: 3px;
+}
+
+
+/* =========================
+   SMOKE
+   ========================= */
+
+.intro-smoke {
+  position: absolute;
+
+  pointer-events: none;
+
+  z-index: 4;
+
+  border-radius: 50%;
+
+  filter: blur(45px);
+
+  opacity: .7;
+}
+
+
+/* дим біля постера */
+
+.intro-smoke-one {
+  width: 650px;
+  height: 260px;
+
+  right: -100px;
+  bottom: -90px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(190,190,190,.18) 0%,
+      rgba(145,145,145,.09) 30%,
+      rgba(100,100,100,.035) 48%,
+      transparent 72%
+    );
+
+  transform: rotate(-9deg);
+}
+
+
+/* трохи диму між текстом і постером */
+
+.intro-smoke-two {
+  width: 480px;
+  height: 180px;
+
+  right: 18%;
+  bottom: 8%;
+
+  opacity: .35;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(210,210,210,.15),
+      rgba(130,130,130,.05) 46%,
+      transparent 72%
+    );
+
+  transform: rotate(8deg);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 850px) {
+
+  .intro .title-wrap {
+    max-width: 100%;
+  }
+
+  .intro-poster {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: min(72vw, 320px);
+
+    margin:
+      50px auto
+      35px;
+  }
+
+  .intro-poster-label {
+    text-align: center;
+  }
+
+  .intro-smoke-one {
+    width: 120%;
+    height: 220px;
+
+    right: -10%;
+    bottom: 5%;
+  }
+
+  .intro-smoke-two {
+    display: none;
+  }
+}
