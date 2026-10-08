@@ -15,7 +15,7 @@ function download(){
  const fit=(text,px,py,max,size,color)=>{x.font=`800 ${size}px Arial`;while(x.measureText(text).width>max&&size>22){size-=2;x.font=`800 ${size}px Arial`}x.fillStyle=color;x.fillText(text,px,py)};
  x.fillStyle="#050507";x.fillRect(0,0,c.width,c.height);
  const glow=x.createRadialGradient(vip?1380:300,220,20,vip?1380:300,220,800);glow.addColorStop(0,vip?"rgba(218,172,63,.20)":"rgba(255,70,56,.18)");glow.addColorStop(1,"rgba(5,5,7,0)");x.fillStyle=glow;x.fillRect(0,0,c.width,c.height);
- x.fillStyle=vip?"#caa956":"#ff4638";x.fillRect(100,75,90,8);x.fillStyle="#f5f5f7";x.font="700 20px Arial";x.fillText("ПІСЛЯ ТИТРІВ  /  PRIVATE PREMIERE",210,84);
+ x.fillStyle=vip?"#caa956":"#ff4638";x.fillRect(100,75,90,8);x.fillStyle="#f5f5f7";x.font="700 20px Arial";x.fillText("Good Moodle Hunting /  PRIVATE PREMIERE",210,84);
  x.fillStyle="#6f707b";x.textAlign="right";x.fillText("18 · 10 · 2026",1700,84);x.textAlign="left";
  if(vip){
    const metal=x.createLinearGradient(110,140,1690,1040);metal.addColorStop(0,"#171713");metal.addColorStop(.45,"#070708");metal.addColorStop(.72,"#18140b");metal.addColorStop(1,"#090909");rr(110,140,1580,900,26,metal,"#c89c3d");
@@ -26,9 +26,9 @@ function download(){
    x.fillStyle="#f0cb68";x.font="900 92px Arial";x.fillText("ПІСЛЯ",430,345);x.fillText("ТИТРІВ",430,430);
    label("ЦЕЙ VIP-КВИТОК НАЛЕЖИТЬ",430,500);fit(selected.name.toLocaleUpperCase("uk-UA"),430,570,820,58,"#fff7df");
    x.strokeStyle="rgba(211,174,78,.52)";x.beginPath();x.moveTo(430,610);x.lineTo(1610,610);x.stroke();
-   label("ДАТА",430,664);value("18 ЖОВТНЯ 2026",430,704);label("ЧАС",760,664);value("18:30",760,704);label("СТАТУС",970,664);value("HONORED GUEST",970,704,23);
-   label("МІСЦЕ",430,770);value("КІНОЗАЛ №1",430,810,24);x.fillStyle="#aaa393";x.font="19px Arial";x.fillText("вул. Кінематографічна, 7 · 2-й поверх",430,842);
-   label("DRESS CODE",430,886);value("DARK CINEMA",430,920,21);
+   label("ДАТА",430,664);value("8 ЖОВТНЯ 2026",430,704);label("ЧАС",760,664);value("18:30",760,704);label("СТАТУС",970,664);value("HONORED GUEST",970,704,23);
+   label("МІСЦЕ",430,770);value("Нова бібліотека",430,810,24);x.fillStyle="#aaa393";x.font="19px Arial";x.fillText("вул. Мельника, 21 · УБТС",430,842);
+   label("DRESS CODE",430,886);value("Шо попало",430,920,21);
    if(source){x.fillStyle="#f7e5ac";rr(1360,650,250,250,8,"#f7e5ac","#c89c3d");x.drawImage(source,1375,665,220,220)}
    x.fillStyle="rgba(202,169,86,.12)";x.font="900 120px Arial";x.fillText("VIP",1060,465);
    x.fillStyle="#d4ad50";x.font="700 20px monospace";x.fillText("ACT III: UNLOCKED",1080,515);x.fillStyle="#858173";x.font="16px monospace";x.fillText("Further instructions classified.",1080,546);
@@ -38,13 +38,13 @@ function download(){
    x.save();x.translate(250,940);x.rotate(-Math.PI/2);x.fillStyle="#0b0b10";x.font="900 50px Arial";x.fillText("ADMIT ONE  ·  PREMIERE PASS",0,0);x.restore();
    for(let py=176;py<1020;py+=42){x.beginPath();x.arc(360,py,8,0,Math.PI*2);x.fillStyle="#050507";x.fill()}
    x.fillStyle="#62636f";x.font="700 19px Arial";x.fillText("PRIVATE PREMIERE  ·  OFFICIAL ENTRY PASS",430,215);x.textAlign="right";x.fillText(`№ ${selected.number}`,1610,215);x.textAlign="left";
-   x.fillStyle="#101017";x.font="900 96px Arial";x.fillText("ПІСЛЯ ТИТРІВ",430,365);
+   x.fillStyle="#101017";x.font="900 96px Arial";x.fillText("Good Moodle Hunting",430,365);
    x.fillStyle="#ff4638";x.fillRect(430,404,82,7);
    label("ЦЕЙ КВИТОК НАЛЕЖИТЬ",430,480);fit(selected.name.toLocaleUpperCase("uk-UA"),430,555,920,60,"#101017");
    x.strokeStyle="#b8bac2";x.beginPath();x.moveTo(430,600);x.lineTo(1610,600);x.stroke();
-   label("ДАТА",430,660);value("18 ЖОВТНЯ 2026",430,702);label("ДВЕРІ",770,660);value("18:00",770,702);label("ПОЧАТОК",980,660);value("18:30",980,702);label("СТАТУС",1190,660);value("PREMIERE GUEST",1190,702,21);
-   label("МІСЦЕ",430,790);value("КІНОЗАЛ №1",430,832,25);x.fillStyle="#686976";x.font="19px Arial";x.fillText("вул. Кінематографічна, 7 · 2-й поверх",430,866);
-   label("DRESS CODE",900,790);value("DARK CINEMA",900,832,23);x.fillStyle="#686976";x.font="17px Arial";x.fillText("Темні кольори · без спалаху",900,866);
+   label("ДАТА",430,660);value("8 ЖОВТНЯ 2026",430,702);label("ДВЕРІ",770,660);value("18:00",770,702);label("ПОЧАТОК",980,660);value("18:30",980,702);label("СТАТУС",1190,660);value("PREMIERE GUEST",1190,702,21);
+   label("МІСЦЕ",430,790);value("Нова бібліотека",430,832,25);x.fillStyle="#686976";x.font="19px Arial";x.fillText("вул. Мельника, 21 · УБТС",430,866);
+   label("DRESS CODE",900,790);value("Шо попало",900,832,23);x.fillStyle="#686976";x.font="17px Arial";x.fillText("Темні кольори · без спалаху",900,866);
    if(source){rr(1370,735,240,240,8,"#fff","#15151a");x.drawImage(source,1385,750,210,210)}
    x.fillStyle="#6f707b";x.font="15px monospace";x.fillText(`TICKET ID  ${selected.ticketId}`,430,916);
    x.textAlign="right";x.fillStyle="#ff4638";x.font="700 17px Arial";x.fillText("ОДИН КВИТОК · ОДИН CHECK-IN",1320,916);x.textAlign="left";
@@ -52,7 +52,7 @@ function download(){
  x.fillStyle=vip?"#caa956":"#ff4638";x.font="700 19px Arial";x.fillText(vip?"ACT III ACCESS GRANTED":"ВАША ІСТОРІЯ ЩЕ НЕ ЗАКІНЧИЛАСЬ.",430,1012);
  x.textAlign="right";x.fillStyle=vip?"#858173":"#676873";x.font="16px Arial";x.fillText("Покажіть QR-код організатору при вході",1650,1012);x.textAlign="left";
  const filename=`${vip?"VIP-Квиток":"Квиток"}-${selected.name.replaceAll(" ","-")}.png`,dataUrl=c.toDataURL("image/png"),blob=ticketBlob(dataUrl),file=typeof File==="function"?new File([blob],filename,{type:"image/png"}):null,mobile=/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
- if(mobile&&file&&navigator.share&&navigator.canShare?.({files:[file]})){navigator.share({files:[file],title:"Квиток на прем’єру «Після титрів»"}).catch(error=>{if(error.name!=="AbortError")openTicketImage(dataUrl)});return}
+ if(mobile&&file&&navigator.share&&navigator.canShare?.({files:[file]})){navigator.share({files:[file],title:"Квиток на прем’єру «Good Moodle Hunting»"}).catch(error=>{if(error.name!=="AbortError")openTicketImage(dataUrl)});return}
  if(mobile){openTicketImage(dataUrl);return}
  const url=URL.createObjectURL(blob),a=document.createElement("a");a.download=filename;a.href=url;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);
 }
