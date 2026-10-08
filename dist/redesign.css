@@ -1,0 +1,262 @@
+:root {
+  --ink: #050507;
+  --paper: #e7e8ec;
+  --gold: #ff4638;
+  --red: #ff3528;
+  --white: #f6f7fb;
+  --muted: #858795;
+  --line: rgba(255,255,255,.13);
+}
+
+body {
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px) 0 0/8vw 100%,
+    #050507;
+}
+
+.topbar {
+  height: 82px;
+  padding-left: clamp(24px, 4vw, 64px);
+  padding-right: clamp(24px, 4vw, 64px);
+  mix-blend-mode: normal;
+  background: linear-gradient(#050507d9, transparent);
+}
+
+.brand-mark {
+  border-color: #ff4638;
+  box-shadow: 0 0 24px rgba(255,70,56,.28);
+}
+
+.intro {
+  text-align: left;
+  padding-left: clamp(24px, 8vw, 130px);
+  padding-right: clamp(24px, 7vw, 110px);
+  background:
+    radial-gradient(ellipse at 78% 35%, rgba(60,82,170,.22), transparent 35%),
+    radial-gradient(ellipse at 15% 70%, rgba(255,48,36,.15), transparent 38%),
+    #050507;
+}
+
+.intro::before {
+  width: 48vw;
+  max-width: 720px;
+  left: auto;
+  right: -6vw;
+  top: 16%;
+  transform: none;
+  border-radius: 0;
+  border: 0;
+  background: repeating-linear-gradient(90deg, transparent 0 28px, rgba(255,255,255,.05) 29px 31px);
+  clip-path: polygon(18% 0,100% 0,82% 100%,0 100%);
+  box-shadow: none;
+  opacity: .8;
+}
+
+.intro::after {
+  content: "PRIVATE SCREENING  /  01";
+  position: absolute;
+  right: clamp(24px, 5vw, 74px);
+  top: 48%;
+  color: rgba(255,255,255,.22);
+  font: 700 .68rem/1 var(--sans);
+  letter-spacing: .25em;
+  transform: rotate(90deg) translateX(50%);
+  transform-origin: right center;
+}
+
+.intro-kicker {
+  border-left: 42px solid #ff4638;
+  padding-left: 14px;
+  color: #fff;
+}
+
+.title-wrap {
+  width: min(900px, 90%);
+}
+
+.title-wrap h1 {
+  font-family: var(--sans);
+  font-weight: 900;
+  font-size: clamp(4.8rem, 13vw, 12rem);
+  line-height: .75;
+  letter-spacing: -.085em;
+  text-transform: uppercase;
+  text-shadow: 8px 8px 0 rgba(255,70,56,.13);
+}
+
+.title-wrap h1 em {
+  -webkit-text-stroke: 1px rgba(255,255,255,.8);
+  color: transparent;
+  font-style: normal;
+}
+
+.chapter { color: #858795; }
+.intro-line { margin-left: 4px; font-family: var(--sans); border-left: 1px solid #ff4638; padding-left: 18px; }
+.primary-button { background: #ff4638; border-color: #ff4638; color: #09090b; clip-path: polygon(0 0,calc(100% - 14px) 0,100% 14px,100% 100%,14px 100%,0 calc(100% - 14px)); }
+.primary-button:hover { background: #ff7065; box-shadow: 0 0 34px rgba(255,70,56,.32); }
+
+.lookup {
+  color: #f6f7fb;
+  background:
+    linear-gradient(135deg, rgba(255,70,56,.08), transparent 30%),
+    #0a0a0e;
+}
+
+.lookup::after {
+  content: "";
+  position: absolute;
+  inset: 9% 7%;
+  border: 1px solid rgba(255,255,255,.08);
+  pointer-events: none;
+}
+
+.panel { max-width: 920px; }
+.panel .eyebrow { color: #ff6a60; }
+.panel h2 { font-family: var(--sans); font-weight: 800; text-transform: uppercase; }
+.panel .muted, .open-ticket-note { color: #858795; }
+.input-row { border-bottom-color: rgba(255,255,255,.38); }
+.input-row input { color: #fff; font-family: var(--sans); font-weight: 500; }
+.input-row input::placeholder { color: #5d5f6b; }
+
+.ticket-screen {
+  background:
+    radial-gradient(circle at 78% 47%, rgba(255,70,56,.12), transparent 32%),
+    linear-gradient(125deg, #08080b, #11111a 55%, #070709);
+}
+
+.ticket-copy h2 {
+  font-family: var(--sans);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(2.7rem, 5.7vw, 6.6rem);
+}
+
+.ticket {
+  min-height: 390px;
+  grid-template-columns: 92px 1fr;
+  transform: rotate(-1deg);
+  filter: drop-shadow(0 38px 65px rgba(0,0,0,.58));
+  animation: ticket-float 5.5s ease-in-out infinite;
+}
+
+.ticket-stub {
+  color: #fff;
+  background: #ff4638;
+  border-right: 1px dashed rgba(255,255,255,.56);
+}
+
+.ticket-stub strong { color: #fff; font-family: var(--sans); font-weight: 900; }
+.ticket-main {
+  background:
+    linear-gradient(115deg, rgba(255,255,255,.95), rgba(214,216,224,.98)),
+    #e7e8ec;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,.12);
+}
+
+.ticket-main::after {
+  content: "ADMIT ONE";
+  position: absolute;
+  right: 32px;
+  top: 80px;
+  font: 900 clamp(2.8rem, 5vw, 5.8rem)/1 var(--sans);
+  letter-spacing: -.07em;
+  color: rgba(18,18,24,.045);
+  transform: rotate(-7deg);
+}
+
+.ticket h3 { font-family: var(--sans); font-weight: 900; letter-spacing: -.065em; }
+.ticket-guest { font-family: var(--sans); font-weight: 800; text-transform: uppercase; }
+.qr { border: 0; background: #fff; box-shadow: 0 0 0 5px #fff, 0 0 0 6px #19191e; }
+
+/* VIP is a separate black metal card, not a recolored paper ticket. */
+.teacher-ticket {
+  min-height: 430px;
+  transform: perspective(1100px) rotateY(-3deg) rotateX(1deg);
+  filter: drop-shadow(0 44px 80px rgba(0,0,0,.75)) drop-shadow(0 0 30px rgba(214,169,74,.1));
+}
+
+.teacher-ticket .ticket-stub {
+  color: #0a0907;
+  border: 0;
+  background: linear-gradient(145deg,#f6df8f,#ad7421 44%,#f8e79d 70%,#8b5d18);
+  box-shadow: inset -1px 0 rgba(255,255,255,.5);
+}
+
+.teacher-ticket .ticket-stub strong { color: #090807; }
+.teacher-ticket .ticket-main {
+  color: #f9f1da;
+  background:
+    radial-gradient(circle at 80% 15%, rgba(237,197,93,.15), transparent 28%),
+    linear-gradient(115deg, rgba(255,255,255,.045), transparent 32%),
+    linear-gradient(145deg, #171613, #070707 58%, #15120d);
+  box-shadow:
+    inset 0 0 0 1px rgba(245,213,125,.5),
+    inset 0 0 0 7px #090909,
+    inset 0 0 0 8px rgba(245,213,125,.17);
+  overflow: hidden;
+}
+
+.teacher-ticket .ticket-main::before {
+  content: "";
+  position: absolute;
+  inset: -70% -35%;
+  background: linear-gradient(112deg, transparent 40%, rgba(94,226,255,.12) 45%, rgba(255,95,190,.13) 50%, rgba(255,223,113,.2) 54%, transparent 60%);
+  transform: translateX(-40%);
+  animation: holo-sweep 4.8s ease-in-out infinite;
+}
+
+.teacher-ticket .ticket-main::after {
+  content: "V  I  P";
+  top: auto;
+  right: 34px;
+  bottom: 96px;
+  color: rgba(226,184,83,.12);
+  font-size: clamp(4rem, 8vw, 8rem);
+  transform: none;
+}
+
+.teacher-ticket .ticket-topline,
+.teacher-ticket .ticket-label,
+.teacher-ticket .ticket-meta small,
+.teacher-ticket .ticket-bottom small { color: #c7a75b; }
+.teacher-ticket h3 { color: #f2d47d; text-shadow: 0 0 28px rgba(239,194,82,.14); }
+.teacher-ticket .ticket-guest { color: #fff8e7; }
+.teacher-ticket .ticket-rule { border-color: rgba(226,184,83,.5); }
+.teacher-ticket .ticket-meta b { color: #f8e8b2; }
+.teacher-ticket .qr { background: #f7e5ac; box-shadow: 0 0 0 5px #f7e5ac, 0 0 0 6px #b8862f, 0 0 32px rgba(235,190,79,.18); }
+
+.details {
+  background:
+    linear-gradient(90deg, rgba(255,70,56,.07) 1px, transparent 1px) 0 0/25vw 100%,
+    #07070a;
+}
+.details h2, .finale h2 { font-family: var(--sans); font-weight: 800; text-transform: uppercase; }
+.detail-card strong { font-family: var(--sans); text-transform: uppercase; }
+.finale h2 em { color: #ff4638; font-style: normal; }
+
+.ops-page {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(86,105,210,.18), transparent 28%),
+    radial-gradient(circle at 12% 80%, rgba(255,70,56,.13), transparent 34%),
+    #050507;
+}
+.scan-result.teacher { background: radial-gradient(circle at 50% 45%, #33240d, #070707 68%); }
+.display-guest.teacher h1 { color: #edc864; text-shadow: 0 0 55px rgba(235,190,79,.25); }
+
+@keyframes ticket-float { 50% { transform: rotate(.4deg) translateY(-8px); } }
+@keyframes holo-sweep { 0%,25% { transform: translateX(-45%); } 68%,100% { transform: translateX(45%); } }
+
+@media (max-width: 620px) {
+  .intro { text-align: center; }
+  .intro::after { display: none; }
+  .title-wrap { width: 100%; }
+  .title-wrap h1 { font-size: clamp(4rem,22vw,6.2rem); }
+  .intro-line { border: 0; padding: 0; }
+  .ticket { grid-template-columns: 48px 1fr; animation: none; }
+  .teacher-ticket { min-height: 390px; transform: none; }
+  .teacher-ticket .ticket-main::after { font-size: 4.5rem; bottom: 90px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticket, .teacher-ticket .ticket-main::before { animation: none !important; }
+}

@@ -1,0 +1,1 @@
+{"name":"pislia-tytriv-premiere","private":true,"type":"module","scripts":{"build":"node scripts/inject-env.mjs","check":"node --check dist/data.js && node --check dist/app.js && node --check dist/scanner.js && node --check dist/display.js && node --check dist/realtime.js"}}
