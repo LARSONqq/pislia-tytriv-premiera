@@ -26,7 +26,7 @@ function download(){
    x.fillStyle="#f0cb68";x.font="900 78px Arial";x.fillText("GOOD MOODLE",430,345);x.fillText("HUNTING",430,430);
    label("ЦЕЙ VIP-КВИТОК НАЛЕЖИТЬ",430,500);fit(selected.name.toLocaleUpperCase("uk-UA"),430,570,820,58,"#fff7df");
    x.strokeStyle="rgba(211,174,78,.52)";x.beginPath();x.moveTo(430,610);x.lineTo(1610,610);x.stroke();
-   label("ДАТА",430,664);value("9 ЖОВТНЯ 2026",430,704);label("ЧАС",760,664);value("10:00",760,704);label("СТАТУС",970,664);value("HONORED GUEST",970,704,23);
+   label("ДАТА",430,664);value("9 ЖОВТНЯ 2026",430,704);label("ЧАС",760,664);value("14:00",760,704);label("СТАТУС",970,664);value("HONORED GUEST",970,704,23);
    label("МІСЦЕ",430,770);value("УБТС · НОВА БІБЛІОТЕКА",430,810,22);x.fillStyle="#aaa393";x.font="19px Arial";x.fillText("вул. Мельника, 21",430,842);
    label("DRESS CODE",430,886);value("ШО ПОПАЛО",430,920,21);
    if(source){x.fillStyle="#f7e5ac";rr(1360,650,250,250,8,"#f7e5ac","#c89c3d");x.drawImage(source,1375,665,220,220)}
@@ -42,7 +42,7 @@ function download(){
    x.fillStyle="#ff4638";x.fillRect(430,404,82,7);
    label("ЦЕЙ КВИТОК НАЛЕЖИТЬ",430,480);fit(selected.name.toLocaleUpperCase("uk-UA"),430,555,920,60,"#101017");
    x.strokeStyle="#b8bac2";x.beginPath();x.moveTo(430,600);x.lineTo(1610,600);x.stroke();
-   label("ДАТА",430,660);value("9 ЖОВТНЯ 2026",430,702);label("ДВЕРІ",770,660);value("09:50",770,702);label("ПОЧАТОК",980,660);value("10:00",980,702);label("СТАТУС",1190,660);value("PREMIERE GUEST",1190,702,21);
+   label("ДАТА",430,660);value("9 ЖОВТНЯ 2026",430,702);label("ДВЕРІ",770,660);value("13:50",770,702);label("ПОЧАТОК",980,660);value("14:00",980,702);label("СТАТУС",1190,660);value("PREMIERE GUEST",1190,702,21);
    label("МІСЦЕ",430,790);value("УБТС · НОВА БІБЛІОТЕКА",430,832,22);x.fillStyle="#686976";x.font="19px Arial";x.fillText("вул. Мельника, 21",430,866);
    label("DRESS CODE",900,790);value("ШО ПОПАЛО",900,832,23);x.fillStyle="#686976";x.font="17px Arial";x.fillText("Будь-який образ · головне приходьте",900,866);
    if(source){rr(1370,735,240,240,8,"#fff","#15151a");x.drawImage(source,1385,750,210,210)}
