@@ -56,7 +56,23 @@ window.PREMIERE = {
     number: "T03",
     type: "teacher",
     role: "HONORED GUEST"
-  }
+  },
+  {
+  ticketId: "GMH-2026-T004",
+  name: "Анастасія Клюєва",
+  aliases: [
+    "Анастасія Клюєва",
+    "Анастасія",
+    "Настя",
+    "Клюєва",
+    "Клюєва Анастасія",
+    "Анастасия Клюева",
+    "Клюева"
+  ],
+  number: "T04",
+  type: "teacher",
+  role: "HONORED GUEST"
+}
 ],
   demoGuests: [
     { ticketId:"GMH-2026-G001-DEMO", name:"Тестовий гість", number:"001", type:"guest", role:"PREMIERE GUEST" }
