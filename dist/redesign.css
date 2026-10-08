@@ -549,13 +549,13 @@ body {
 
 /* НИЖНІЙ ТЕКСТ */
 .intro .intro-line {
-  margin-top: 45px !important;
+  margin-top: 75px !important;
 }
 
 /* МОБІЛЬНА ВЕРСІЯ */
 @media (max-width: 850px) {
   .intro .chapter {
-    font-size: 13px !important;
+    font-size: 45px !important;
   }
 
   .intro .intro-line {
