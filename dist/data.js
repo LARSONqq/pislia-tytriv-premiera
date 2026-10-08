@@ -14,10 +14,50 @@ window.PREMIERE = {
     dressCode: "ШО ПОПАЛО"
   },
   vipGuests: [
-    { ticketId:"GMH-2026-VIP01-F9M2", name:"Мільо Ференц", number:"V01", type:"teacher", role:"HONORED GUEST" },
-    { ticketId:"GMH-2026-VIP02-B4A7", name:"Бендус Андрій", number:"V02", type:"teacher", role:"HONORED GUEST" },
-    { ticketId:"GMH-2026-VIP03-D8R3", name:"Друзь Рувім", number:"V03", type:"teacher", role:"HONORED GUEST" }
-  ],
+  {
+    ticketId: "PT-2026-T001",
+    name: "Ференц Мільо",
+    aliases: [
+      "Ференц Мільо",
+      "Ференц",
+      "Мільо",
+      "Мільо Ференц",
+      "Ференц Міло",
+      "Міло Ференц"
+    ],
+    number: "T01",
+    type: "teacher",
+    role: "HONORED GUEST"
+  },
+
+  {
+    ticketId: "PT-2026-T002",
+    name: "Андрій Бендус",
+    aliases: [
+      "Андрій Бендус",
+      "Андрій",
+      "Бендус",
+      "Бендус Андрій"
+    ],
+    number: "T02",
+    type: "teacher",
+    role: "HONORED GUEST"
+  },
+
+  {
+    ticketId: "PT-2026-T003",
+    name: "Рувім Друзь",
+    aliases: [
+      "Рувім Друзь",
+      "Рувім",
+      "Друзь",
+      "Друзь Рувім"
+    ],
+    number: "T03",
+    type: "teacher",
+    role: "HONORED GUEST"
+  }
+],
   demoGuests: [
     { ticketId:"GMH-2026-G001-DEMO", name:"Тестовий гість", number:"001", type:"guest", role:"PREMIERE GUEST" }
   ],
