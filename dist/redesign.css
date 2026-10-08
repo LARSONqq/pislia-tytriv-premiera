@@ -321,9 +321,9 @@ body {
 
 .intro-poster {
   position: absolute;
-  top: 12%;
-  right: 3%;
-  width: clamp(300px, 25vw, 440px);
+  top: 10%;
+  right: 4%;
+  width: clamp(330px, 27vw, 480px);
   z-index: 3;
 }
 
