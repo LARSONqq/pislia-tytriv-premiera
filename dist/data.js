@@ -15,7 +15,7 @@ window.PREMIERE = {
   },
   vipGuests: [
   {
-    ticketId: "PT-2026-T001",
+    ticketId: "GMH-2026-T001",
     name: "Ференц Мільо",
     aliases: [
       "Ференц Мільо",
@@ -31,7 +31,7 @@ window.PREMIERE = {
   },
 
   {
-    ticketId: "PT-2026-T002",
+    ticketId: "GMH-2026-T002",
     name: "Андрій Бендус",
     aliases: [
       "Андрій Бендус",
@@ -45,7 +45,7 @@ window.PREMIERE = {
   },
 
   {
-    ticketId: "PT-2026-T003",
+    ticketId: "GMH-2026-T003",
     name: "Рувім Друзь",
     aliases: [
       "Рувім Друзь",

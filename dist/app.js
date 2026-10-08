@@ -58,4 +58,42 @@ function download(){
 }
 function makeOpenTicket(name){const key=`good-moodle-hunting-ticket:${norm(name)}`,saved=localStorage.getItem(key);if(saved)return JSON.parse(saved);const suffix=(crypto.randomUUID?.()||Math.random().toString(36).slice(2)).replaceAll("-","").slice(0,10).toUpperCase();const ticket={ticketId:`GMH-2026-O-${suffix}`,name:name.trim(),number:`O${suffix.slice(-4)}`,type:"guest",role:"PREMIERE GUEST"};localStorage.setItem(key,JSON.stringify(ticket));return ticket}
 $("#startButton").onclick=()=>go("lookup");$$("[data-go]").forEach(b=>b.onclick=()=>go(b.dataset.go));$("#saveTicket").onclick=download;
-$("#guestForm").onsubmit=async e=>{e.preventDefault();const name=$("#guestName").value.trim();if(name.length<2){$("#formMessage").textContent="Введіть ім’я, яке буде надруковане на квитку.";return}const vip=PREMIERE.vipGuests.find(x=>norm(x.name)===norm(name)),ticket=vip||makeOpenTicket(name);$("#formMessage").textContent="Створюємо унікальний квиток…";$("#formMessage").className="form-message success";try{if(!vip)await PREMIERE_API.registerGuest(ticket);show(ticket)}catch{$("#formMessage").textContent="Не вдалося створити квиток. Спробуйте ще раз.";$("#formMessage").className="form-message"}};
+$("#guestForm").onsubmit = async e => {
+  e.preventDefault();
+
+  const name = $("#guestName").value.trim();
+
+  if (name.length < 2) {
+    $("#formMessage").textContent =
+      "Введіть ім’я, яке буде надруковане на квитку.";
+    return;
+  }
+
+  const entered = norm(name);
+
+  const vip = PREMIERE.vipGuests.find(person => {
+    const variants = [
+      person.name,
+      ...(person.aliases || [])
+    ];
+
+    return variants.some(alias => norm(alias) === entered);
+  });
+
+  const ticket = vip || makeOpenTicket(name);
+
+  $("#formMessage").textContent = "Створюємо унікальний квиток…";
+  $("#formMessage").className = "form-message success";
+
+  try {
+    if (!vip) {
+      await PREMIERE_API.registerGuest(ticket);
+    }
+
+    show(ticket);
+  } catch {
+    $("#formMessage").textContent =
+      "Не вдалося створити квиток. Спробуйте ще раз.";
+    $("#formMessage").className = "form-message";
+  }
+};
